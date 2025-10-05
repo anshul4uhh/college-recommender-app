@@ -153,7 +153,7 @@
       const data = { location, budget, interest, course };
 
       try {
-        const res = await fetch("http://127.0.0.1:8000/recommend_colleges/", {
+        const res = await fetch("https://college-recommender-app.onrender.com/recommend_colleges/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
