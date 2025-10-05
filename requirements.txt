@@ -1,0 +1,10 @@
+protobuf
+fastapi
+pydantic
+dotenv
+python-dotenv
+fastapi
+uvicorn
+gunicorn
+python-multipart
+google-generativeai

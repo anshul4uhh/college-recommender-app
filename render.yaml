@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: college-recommender
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn -w 4 -k uvicorn.workers.UvicornWorker backend.main:app"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+
+  - type: web
+    name: college-recommender-frontend
+    env: static
+    staticPublishPath: frontend
+    autoDeploy: true

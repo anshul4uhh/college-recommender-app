@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Recommender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero-section">
+    <h1>🎓 College Recommender</h1>
+    <p>Discover your perfect college match based on your preferences, budget, and career goals</p>
+  </div>
+
+  <div class="main-container">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Find Your Perfect College</h2>
+        <p>Fill in your preferences to get personalized recommendations</p>
+      </div>
+
+      <form id="collegeForm">
+        <div class="form-group">
+          <label>📍 Preferred Location</label>
+          <input type="text" id="location" placeholder="e.g., Delhi, Maharashtra, Bangalore" required />
+        </div>
+
+        <div class="form-group">
+          <label>💰 Budget Range (in ₹)</label>
+          <input type="text" id="budget" placeholder="e.g., 5-10 Lakhs" required />
+        </div>
+
+        <div class="form-group">
+          <label>🎯 Interest Field</label>
+          <select id="interest" required>
+            <option value="">--Select Your Field--</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Medical">Medical</option>
+            <option value="Arts">Arts</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Science">Science</option>
+            <option value="Management">Management</option>
+            <option value="Law">Law</option>
+            <option value="Design">Design</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="text" id="customInterest" placeholder="Enter your interest" style="display:none;" />
+        </div>
+
+        <div class="form-group">
+          <label>📚 Course</label>
+          <select id="course" required disabled>
+            <option value="">--First Select Interest Field--</option>
+          </select>
+          <input type="text" id="customCourse" placeholder="Enter your course" style="display:none;" />
+        </div>
+
+        <button type="submit">🔍 Find My Perfect Colleges</button>
+      </form>
+    </div>
+
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
